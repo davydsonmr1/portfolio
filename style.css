@@ -1,0 +1,142 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  background-image: url('/portfolio/img/computer-program-coding-screen.jpg');
+  background-size: cover;
+}
+
+.navbar {
+  display: flex;
+  justify-content: flex-end;
+  padding: 20px;
+  background-color: #161515a9;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #999;
+  font-weight: 500;
+}
+
+.navbar a.active {
+  color: #27ae60;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #111010f3;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.profile {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #09160fbb;
+  color: #fff;
+  padding: 40px;
+  border-radius: 10px;
+}
+
+.profile img {
+  width: 150px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 3px solid #fff;
+  margin-right: 30px;
+}
+
+.profile .info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-right: auto;
+}
+
+.profile .contatos {
+  text-align: left;
+}
+
+.profile h1 {
+  margin: 0;
+  font-size: 36px;
+  font-weight: 700;
+}
+
+.profile p {
+  margin: 5px 0 15px;
+  font-weight: 300;
+}
+
+.profile .social-icons {
+  margin-top: 10px;
+}
+
+.profile .social-icons a {
+  margin-right: 15px;
+  color: #fff;
+  font-size: 24px;
+  text-decoration: none;
+}
+
+.social-icons a:hover {
+  color: #ffffff;
+}
+
+.details {
+  margin-top: 15px;
+  color: #fff;
+}
+
+.details ul {
+  list-style: none;
+  padding: 0;
+}
+
+.details li {
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.details li span {
+  font-weight: 300;
+  color: #f3f3f3;
+}
+
+.about h2 {
+  font-size: 24px;
+  color: #333;
+}
+
+.about p {
+  color: #555;
+}
+
+.btn-download {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #27ae60;
+  color: #faf7f7;
+  text-decoration: none;
+  border-radius: 5px;
+  border: 2px solid #333;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-download:hover {
+  background-color: #000000;
+  color: #fff;
+}
+
+a:link{
+  text-decoration: none;
+  background-color: transparent;
+  color: white;
+}
