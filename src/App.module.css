@@ -1,0 +1,88 @@
+.app {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-xl);
+  padding: var(--space-xl) var(--space-md);
+  position: relative;
+}
+
+/* ═══ Logo / Brand Header ═══ */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.brandDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent-gradient);
+}
+
+/* ═══ Footer ═══ */
+.footer {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  padding: var(--space-md) 0;
+}
+
+.footerDivider {
+  width: 20px;
+  height: 1px;
+  background: var(--glass-border);
+}
+
+/* ═══ Noise texture overlay ═══ */
+.noiseOverlay {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.015;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 128px 128px;
+}
+
+/* ═══ Swipe hint (mobile) ═══ */
+.swipeHint {
+  display: none;
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  animation: fadeInOut 3s ease-in-out forwards;
+}
+
+@keyframes fadeInOut {
+  0% { opacity: 0; }
+  20% { opacity: 1; }
+  80% { opacity: 1; }
+  100% { opacity: 0; display: none; }
+}
+
+/* ═══ Responsive ═══ */
+@media (max-width: 768px) {
+  .app {
+    padding: var(--space-md) var(--space-sm);
+    gap: var(--space-lg);
+    justify-content: flex-start;
+    padding-top: var(--space-2xl);
+  }
+
+  .swipeHint {
+    display: block;
+  }
+}

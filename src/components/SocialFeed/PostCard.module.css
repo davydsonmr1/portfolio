@@ -1,0 +1,123 @@
+.postCard {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  transition: all var(--duration-normal) var(--ease-out);
+}
+
+.postCard:hover {
+  background: var(--glass-bg-hover);
+  border-color: var(--glass-border-hover);
+}
+
+/* ═══ Post Header ═══ */
+.postHeader {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.linkedinIcon {
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-sm);
+  background: linear-gradient(135deg, #0077B5, #00A0DC);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 700;
+  font-size: 0.85rem;
+  flex-shrink: 0;
+}
+
+.postMeta {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.postAuthor {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.postDate {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+}
+
+/* ═══ Post Content ═══ */
+.postText {
+  font-size: 0.85rem;
+  line-height: 1.7;
+  color: var(--text-secondary);
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.postTextTruncated {
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.readMore {
+  font-size: 0.78rem;
+  color: var(--accent-primary);
+  cursor: pointer;
+  font-weight: 500;
+  padding: 0;
+  background: none;
+  border: none;
+  align-self: flex-start;
+  transition: color var(--duration-fast) var(--ease-out);
+}
+
+.readMore:hover {
+  color: var(--accent-secondary);
+}
+
+/* ═══ Post Image ═══ */
+.postImage {
+  width: 100%;
+  border-radius: var(--radius-sm);
+  object-fit: cover;
+  max-height: 250px;
+  background: var(--bg-elevated);
+}
+
+/* ═══ Feed Container ═══ */
+.feedContainer {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  max-height: 400px;
+  overflow-y: auto;
+  padding-right: var(--space-sm);
+}
+
+.emptyState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-md);
+  padding: var(--space-2xl);
+  text-align: center;
+}
+
+.emptyIcon {
+  font-size: 2rem;
+  opacity: 0.4;
+}
+
+.emptyText {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
