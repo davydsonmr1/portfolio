@@ -35,8 +35,11 @@ export function useLinkedBridge() {
       }
 
       const json = await response.json();
-      const data = json.data || json.posts || json || [];
-      setPosts(Array.isArray(data) ? data : []);
+      console.log("🔗 API Response:", json);
+      // Filtro de Segurança: Extrai a lista verificando 'data' ou 'posts'
+      const extractedData = json?.data || json?.posts || json;
+      const validPosts = Array.isArray(extractedData) ? extractedData : [];
+      setPosts(validPosts);
     } catch (err) {
       setError(err.message || 'Erro de conexão. Verifique sua internet.');
     } finally {
@@ -51,7 +54,9 @@ export function useLinkedBridge() {
         method: 'POST',
         headers: {
           'X-API-KEY': API_KEY,
+          'Content-Type': 'application/json' // 👈 A Linha Mágica que faltava!
         },
+        body: JSON.stringify({}) // 👈 Satisfaz o Fastify com um corpo JSON vazio
       });
 
       if (!response.ok) {
@@ -66,6 +71,7 @@ export function useLinkedBridge() {
       setIsSyncing(false);
     }
   }, [fetchPosts]);
+
 
   useEffect(() => {
     fetchPosts();

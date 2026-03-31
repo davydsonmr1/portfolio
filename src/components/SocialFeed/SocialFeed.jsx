@@ -31,7 +31,7 @@ export default function SocialFeed() {
       </button>
 
       {/* Posts */}
-      {!posts || posts.length === 0 ? (
+      {!Array.isArray(posts) || posts.length === 0 ? (
         <div className={styles.emptyState}>
           <span className={styles.emptyIcon}>📭</span>
           <p className={styles.emptyText}>Nenhum post encontrado no momento.</p>
