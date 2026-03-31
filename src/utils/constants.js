@@ -1,6 +1,6 @@
 // ─── API Configuration ───
 export const API_BASE_URL = 'https://linkedbridge.onrender.com/api/v1';
-export const API_KEY = 'lb_live_483daca5e04923f321cf061146f84f1be7d56da7387afe98d5be618aba63151c';
+export const API_KEY = 'lb_live_d3e86119d8ad977ccb60419eb7da70fab3d3786ae4da806d97d57fdf9d210c83';
 
 // ─── Page Configuration ───
 export const PAGES = [
