@@ -121,3 +121,66 @@
   font-size: 0.85rem;
   color: var(--text-muted);
 }
+
+/* ═══ Feed Wrapper (with sync button) ═══ */
+.feedWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+/* ═══ Sync Button ═══ */
+.syncButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm);
+  padding: 10px var(--space-lg);
+  background: var(--glass-bg);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-full);
+  color: var(--text-secondary);
+  font-size: 0.82rem;
+  font-weight: 500;
+  font-family: var(--font-body);
+  cursor: pointer;
+  transition: all var(--duration-normal) var(--ease-out);
+  align-self: flex-start;
+  letter-spacing: 0.02em;
+}
+
+.syncButton:hover:not(:disabled) {
+  background: var(--glass-bg-hover);
+  border-color: var(--accent-primary);
+  color: var(--text-primary);
+  box-shadow: var(--accent-glow);
+  transform: translateY(-1px);
+}
+
+.syncButton:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.syncButtonSyncing {
+  border-color: var(--accent-secondary);
+  color: var(--accent-secondary);
+  cursor: not-allowed;
+  opacity: 0.85;
+}
+
+.syncIcon {
+  font-size: 0.95rem;
+  display: inline-block;
+  transition: transform var(--duration-normal) var(--ease-out);
+}
+
+.syncIconSpinning {
+  animation: syncSpin 1s linear infinite;
+}
+
+@keyframes syncSpin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
